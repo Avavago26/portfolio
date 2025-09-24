@@ -1,10 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
+
+// Optimized: Added force3D: true for GPU acceleration.
 gsap.fromTo(".image-top-left",
     { x: 0, opacity: 1 },
     {
         x: -200,
         opacity: 0,
         duration: 1,
+        force3D: true, // Optimization for mobile lag
         scrollTrigger: {
             trigger: ".image-top-left",
             start: "top left",
@@ -14,12 +17,14 @@ gsap.fromTo(".image-top-left",
     }
 );
 
+// Optimized: Added force3D: true for GPU acceleration.
 gsap.fromTo(".image-bottom-right",
     { x: 0, opacity: 1 },
     {
         x: 300,
         opacity: 0,
         duration: 1,
+        force3D: true, // Optimization for mobile lag
         scrollTrigger: {
             trigger: ".image-bottom-right",
             start: "bottom right",
@@ -28,6 +33,8 @@ gsap.fromTo(".image-bottom-right",
         }
     }
 );
+
+// Optimized: Added force3D: true for GPU acceleration.
 gsap.fromTo(".about__container",
     {
         y: 250,
@@ -40,6 +47,7 @@ gsap.fromTo(".about__container",
         scale: 1,
         duration: 2,
         ease: "power3.out",
+        force3D: true, // Optimization for mobile lag
         scrollTrigger: {
             trigger: ".about__container",
             start: "top bottom",
@@ -168,6 +176,7 @@ function updateCarousel() {
             zIndex = 1;
         }
 
+        // Optimized: Added force3D: true for GPU acceleration.
         gsap.to(card, {
             x: xPos,
             scale: scaleSize,
@@ -175,7 +184,8 @@ function updateCarousel() {
             rotationY: index === currentCardIndex ? 0 : (index === (currentCardIndex - 1 + cardsData.length) % cardsData.length ? 10 : -10),
             zIndex: zIndex,
             duration: 0.6,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
+            force3D: true, // Optimization for mobile lag
         });
     });
 }
