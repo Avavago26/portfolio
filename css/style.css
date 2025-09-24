@@ -481,7 +481,7 @@ main{
   font-size: var(--fs-3);
 }
 .overlay {
-  display: flex; /* Keep it flex, but hide it off-screen initially */
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -495,14 +495,14 @@ main{
   justify-content: center;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   opacity: 0;
-  transform: translateY(-100%); /* Start off-screen above */
-  pointer-events: none; /* Disables clicks when hidden */
+  transform: translateY(-100%);
+  pointer-events: none;
 }
 
 .overlay--visible {
   opacity: 1;
-  transform: translateY(0); /* Slide into view */
-  pointer-events: auto; /* Enables clicks when visible */
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .overlay__close-button {
@@ -645,6 +645,10 @@ main{
   }
 }
 @media screen and (width <= 48em){
+  .about__section{
+    background-attachment: unset;
+  }
+
   .carousel__card {
     width: 70%;
     height: 100%;
