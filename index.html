@@ -1,10 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel=" stylesheet" href="css/style.css">
+  <title>Vahit Saygin Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-$END$
+<span id="upper"></span>
+<header class="header__container">
+  <div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <nav class="navbar">
+    <a class='navbar__button hidden' href="assets/Vahit.Saygin-CV.pdf" download="Vahit Saygin CV.pdf">Download CV</a>
+    <ul class="navbar__links">
+      <li><a class="navbar__link hover" href="#upper">Home</a></li>
+      <li><a class="navbar__link hover" href="#about">About me</a></li>
+      <li><div class="navbar__link dropdown">
+        <button class="dropbtn">Experience <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12" fill="none">
+          <path d="M0.5 5.5L4.5 10.5L8.5 5.5" stroke="white"/>
+        </svg>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#experience">Game Design</a>
+          <a href="#experience">3D & 2D Art</a>
+        </div>
+      </div>
+      </li>
+      <li><a class="navbar__link hover" href="#contact">Contact me</a></li>
+
+    </ul>
+    <a class='navbar__button button-p' href="assets/Vahit.Saygin-CV.pdf" download="Vahit Saygin CV.pdf">Download CV</a>
+  </nav>
+</header>
+<div class="image-wrapper">
+  <img src="assets/img/carpet.png" alt="Image 1" class="image-top-left">
+  <img src="assets/img/carpet_filled.png" alt="Image 2" class="image-bottom-right">
+</div>
+<main>
+  <section id="home" class="hero__section">
+    <div class="badge__title--container">
+      <div class="badge__container">
+        <p class="hero__badge">Game Designer</p>
+        <p class="hero__badge">3D/2D Artist</p>
+      </div>
+      <h1 class="hero__title">
+        Vahit Saygin
+      </h1>
+    </div>
+    <div class="hero__button--container">
+      <div class="rotating-container">
+        <p class="rotating__welcome">
+          Hoş geldin
+        </p>
+      </div>
+      <div class="diamond">
+
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about__section">
+    <div class="about__container">
+      <div class="about__image--container">
+        <img class="about__image" src="./assets/img/me.png" alt="">
+      </div>
+      <div class="description__container">
+        <h2 class="description__title">
+          My name is Vahit Saygin, Game Designer.
+        </h2>
+        <p class="description__text">
+          Since 2021, I've been a semi-independent designer and 3D artist, creating a variety of games and experiences.
+          My passion for game development has led me to work on a wide range of projects, from commercial releases to
+          academic work, and game jams. I'm skilled in a variety of tools, including Unreal Engine, Unity, Blender, Maya,
+          and Substance Painter.
+        </p>
+        <div class="about__buttons--container">
+          <a class='button-p contact__about--button' href="assets/Vahit.Saygin-CV.pdf">Contact me</a>
+          <a class='button-p cv__about--button' href="assets/Vahit.Saygin-CV.pdf" download="Vahit Saygin CV.pdf">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="experience__section">
+    <div class="carousel">
+      <header class="carousel__header">
+        <h1 class="carousel__title">My experience</h1>
+      </header>
+
+      <div class="carousel__nav-links">
+        <a class="button-p">Game Design</a>
+        <div class="carousel__navigation-arrows">
+          <button id="prevBtn" class="button-p carousel__arrow">&lt;</button>
+          <button id="nextBtn" class="button-p carousel__arrow">&gt;</button>
+        </div>
+      </div>
+
+      <div class="carousel__cards-container">
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact__section">
+    <a class='button-p contact__button' href="mailto:someone@example.com">
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="38" viewBox="0 0 49 38" fill="none">
+      <path d="M42.5 0.5H6.5C3.18629 0.5 0.5 3.18629 0.5 6.5V31.5C0.5 34.8137 3.18629 37.5 6.5 37.5H42.5C45.8137 37.5 48.5 34.8137 48.5 31.5V6.5C48.5 3.18629 45.8137 0.5 42.5 0.5Z" stroke="white"/>
+      <path d="M7.5 9.5L21.0627 21.3239C23.0325 23.0412 25.9675 23.0412 27.9373 21.3239L41.5 9.5" stroke="white" stroke-width="0.871795"/>
+      <path d="M41.5 30.4229L29.7308 19.9613L27.6385 21.5305C25.7786 22.9254 23.2214 22.9254 21.3615 21.5305L19.2692 19.9613L7.5 30.4229" stroke="white" stroke-width="0.871795"/>
+    </svg>
+      vahitsaygin.work@hotmail.com</a>
+    <a class='button-p contact__button' href="tel:+32495683409">
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+      <g clip-path="url(#clip0_1_115)">
+        <path d="M17.8438 23.4001C19.3873 26.5876 21.9648 29.1585 25.1563 30.6938C25.3917 30.8053 25.6521 30.8535 25.9118 30.8338C26.1715 30.8141 26.4216 30.7271 26.6375 30.5813L31.325 27.4501C31.5321 27.3096 31.7714 27.2239 32.0206 27.2009C32.2698 27.178 32.5207 27.2185 32.75 27.3188L41.525 31.0876C41.8249 31.2124 42.0755 31.4323 42.2381 31.7135C42.4007 31.9947 42.4664 32.3216 42.425 32.6438C42.1469 34.8146 41.0873 36.8096 39.4446 38.2556C37.8018 39.7017 35.6885 40.4996 33.5 40.5001C26.737 40.5001 20.251 37.8135 15.4688 33.0313C10.6866 28.2491 8 21.7631 8 15.0001C8.00049 12.8116 8.7984 10.6982 10.2444 9.05548C11.6904 7.41274 13.6855 6.35318 15.8563 6.07506C16.1784 6.03367 16.5053 6.09935 16.7865 6.26198C17.0677 6.4246 17.2877 6.67516 17.4125 6.97506L21.1813 15.7688C21.2793 15.9945 21.3203 16.2408 21.3006 16.486C21.281 16.7312 21.2014 16.9679 21.0688 17.1751L17.9375 21.9376C17.7981 22.153 17.7163 22.4005 17.6999 22.6566C17.6834 22.9126 17.733 23.1686 17.8438 23.4001Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_1_115">
+          <rect width="48" height="48" fill="white" transform="translate(0.5)"/>
+        </clipPath>
+      </defs>
+    </svg>
+      +32 495 68 34 09</a>
+  </section>
+</main>
+<div class="overlay" id="mobile-overlay">
+  <div class="overlay__close-button" id="close-overlay">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </div>
+  <ul class="overlay__links">
+    <li><a class="overlay__link" href="#upper">Home</a></li>
+    <li><a class="overlay__link" href="#about">About me</a></li>
+    <li><a class="overlay__link" href="#experience">Experience</a></li>
+    <li><a class="overlay__link" href="#contact">Contact me</a></li>
+    <li><a class='button-p' href="assets/Vahit.Saygin-CV.pdf" download="Vahit Saygin CV.pdf">Download CV</a></li>
+  </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/nav.js"></script>
+
 </body>
 </html>
