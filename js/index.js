@@ -221,6 +221,28 @@ const updateCarousel = (cards, descriptionBoxes, index, dataLength) => {
     });
 }
 
+const attachEventListeners = () => {
+    gdesignPrevBtn.addEventListener('click', () => {
+        gdesignCardIndex = (gdesignCardIndex - 1 + gameDesignData.length) % gameDesignData.length;
+        updateCarousel(gdesignCards, gdesignDescriptionBoxes, gdesignCardIndex, gameDesignData.length);
+    });
+
+    gdesignNextBtn.addEventListener('click', () => {
+        gdesignCardIndex = (gdesignCardIndex + 1) % gameDesignData.length;
+        updateCarousel(gdesignCards, gdesignDescriptionBoxes, gdesignCardIndex, gameDesignData.length);
+    });
+
+    assetsPrevBtn.addEventListener('click', () => {
+        assetsCardIndex = (assetsCardIndex - 1 + assetsData.length) % assetsData.length;
+        updateCarousel(assetsCards, assetsDescriptionBoxes, assetsCardIndex, assetsData.length);
+    });
+
+    assetsNextBtn.addEventListener('click', () => {
+        assetsCardIndex = (assetsCardIndex + 1) % assetsData.length;
+        updateCarousel(assetsCards, assetsDescriptionBoxes, assetsCardIndex, assetsData.length);
+    });
+}
+
 const initializeCarousels = () => {
     createCarousel(gameDesignData, gdesignCardsContainer, gd);
     createCarousel(assetsData, assetsCardsContainer, assets);
@@ -230,6 +252,7 @@ const initializeCarousels = () => {
     gdesignDescriptionBoxes = gsap.utils.toArray(`.${gd}__description-box`);
     assetsDescriptionBoxes = gsap.utils.toArray(`.${assets}__description-box`);
 
+    attachEventListeners();
 
     if (gameDesignData.length > 0) {
         updateCarousel(gdesignCards, gdesignDescriptionBoxes, gdesignCardIndex, gameDesignData.length);
