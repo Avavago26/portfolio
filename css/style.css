@@ -413,7 +413,7 @@ main{
 .carousel__cards-container {
   position: relative;
   width: 100%;
-  min-height: 550px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -631,9 +631,6 @@ main{
     width: 50%;
     height: 70%;
   }
-  .carousel {
-    height: 90vh;
-  }
   .image-top-left {
     width: 50%;
   }
@@ -690,7 +687,7 @@ main{
   }
   .carousel__card {
     width: 70%;
-    height: 60%;
+    height: 70%;
   }
   .image-top-left {
     width: 65%;
@@ -727,9 +724,6 @@ main{
   }
   .carousel__card-details{
     font-size: calc(1.2* var(--fs-0));
-  }
-  .carousel {
-    height: 90vh;
   }
   .hero__title{
     font-size: 4rem;
