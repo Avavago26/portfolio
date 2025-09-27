@@ -243,27 +243,6 @@ const attachEventListeners = () => {
     });
 }
 
-const SWIPE_THRESHOLD = 50;
-function handleSwipe(container, prevButton, nextButton) {
-    let touchStartX = 0;
-
-    container.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    container.addEventListener('touchend', (e) => {
-        const touchEndX = e.changedTouches[0].clientX;
-        const swipeDistance = touchStartX - touchEndX;
-
-        if (swipeDistance > SWIPE_THRESHOLD) {
-            nextButton.click();
-        } else if (swipeDistance < -SWIPE_THRESHOLD) {
-            prevButton.click();
-        }
-        touchStartX = 0;
-    });
-}
-
 const initializeCarousels = () => {
     createCarousel(gameDesignData, gdesignCardsContainer, gd);
     createCarousel(assetsData, assetsCardsContainer, assets);
@@ -273,9 +252,6 @@ const initializeCarousels = () => {
     gdesignDescriptionBoxes = gsap.utils.toArray(`.${gd}__description-box`);
     assetsDescriptionBoxes = gsap.utils.toArray(`.${assets}__description-box`);
 
-    attachEventListeners();
-    handleSwipe(gdesignCardsContainer, gdesignPrevBtn, gdesignNextBtn);
-    handleSwipe(assetsCardsContainer, assetsPrevBtn, assetsNextBtn);
 
     if (gameDesignData.length > 0) {
         updateCarousel(gdesignCards, gdesignDescriptionBoxes, gdesignCardIndex, gameDesignData.length);
