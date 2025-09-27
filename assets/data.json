@@ -1,0 +1,63 @@
+{
+  "gameDesign": [
+    {
+      "title": "Paw-ism",
+      "badge": "Game design",
+      "url": "https://va-vahit-sh.itch.io/paw-ism",
+      "img": "./assets/img/project2.png",
+      "details": [
+        "Concept, narrative, mechanics, environment design",
+        "Unreal Engine, Blender",
+        "GameJam #4-creativity, #13-fun"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "title": "Missie Maatje",
+      "badge": "2D artist",
+      "url": "https://kaspervdv125.itch.io/missie-maatje",
+      "img": "./assets/img/project1.png",
+      "details": [
+        "Efficient mass 2D asset production, UI design",
+        "Photoshop, Unity, Blender"
+      ]
+    },
+    {
+      "title": "Excelsior",
+      "badge": "3D Asset",
+      "url": "https://sketchfab.com/3d-models/excelsior-weaponcraft-5c775fb842804e7ab19482984be9a29b",
+      "img": "./assets/img/excelsior.jpeg",
+      "details": [
+        "Blender, Photoshop"
+      ]
+    },
+    {
+      "title": "Diorama",
+      "badge": "3D environment",
+      "url": "https://sketchfab.com/3d-models/dae-diorama-by-the-ocean-34854e45c639472aa90199699fbfd0fa",
+      "img": "./assets/img/diorama.jpeg",
+      "details": [
+        "Maya, Photoshop"
+      ]
+    },
+    {
+      "title": "Hollow Knight plane",
+      "badge": "3D Asset",
+      "url": "https://sketchfab.com/3d-models/excelsior-weaponcraft-5c775fb842804e7ab19482984be9a29b",
+      "img": "./assets/img/knight.png",
+      "details": [
+        "Blender, Substance Painter"
+      ]
+    },
+    {
+      "title": "Genie shop",
+      "badge": "3D assets",
+      "url": "https://sketchfab.com/3d-models/dae-bazaar-genie-shop-0ce4f9c31436422eab3a23bac71e0b6a",
+      "img": "./assets/img/genie.jpeg",
+      "details": [
+        "Blender, Photoshop"
+      ]
+    }
+  ]
+}

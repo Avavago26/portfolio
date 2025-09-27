@@ -160,13 +160,17 @@ main{
   cursor: pointer;
 }
 .menu-toggle {
+  position: sticky;
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
   cursor: pointer;
   z-index: 20;
+  background-color: rgba(4, 4, 4, 0.69);
+  border-radius: .5rem;
 }
 
 .bar {
@@ -268,7 +272,7 @@ main{
   width: 80%;
 }
 .description__container{
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: var(--sp-m);
@@ -331,23 +335,28 @@ main{
 
 .experience__section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: var(--sp-2xl) var(--sp-m);
   background-color: var(--c-dark);
   width: 90%;
+  gap: var(--sp-xl);
 }
 
 .carousel {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  height: auto;
+  margin: var(--sp-xl) auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--sp-l);
 }
-
+.carousel__assets{
+  margin-top: var(--sp-xl);
+}
 .carousel__header {
   text-align: center;
 }
@@ -404,11 +413,13 @@ main{
 .carousel__cards-container {
   position: relative;
   width: 100%;
-  min-height: 350px;
+  height: 100%;
+  min-height: 550px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   perspective: 1000px;
+  margin-top: 2rem;
 }
 
 .carousel__card {
@@ -423,37 +434,62 @@ main{
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   color: var(--c-text-light);
   font-size: var(--fs-2);
   transform-style: preserve-3d;
-  padding-bottom: 2rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
-.carousel__card-text {
+.carousel__card-description-box {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  background: rgb(0, 0, 0);
-  padding: 1rem;
-  border-radius: 24px;
+  top: 400px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  padding: 1rem 0;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease;
+  color: var(--c-text-light);
+  pointer-events: none;
 }
 
 .carousel__card-title {
   font-size: var(--fs-2);
-  margin: 0 0 0.5rem 0;
   font-weight: 700;
 }
 
-.carousel__card-description {
-  font-size: var(--fs-0);
-  margin: 0;
-  line-height: 1.4;
+
+.description-box__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--sp-l);
+  gap: var(--sp-xl);
 }
 
+.carousel__card-badge {
+  background-color: var(--c-text-light);
+  color: var(--c-dark);
+  padding: var(--sp-xs) var(--sp-s);
+  border-radius: 10px;
+  font-size: var(--fs-1);
+  white-space: nowrap;
+}
+.carousel__card-details{
+  width: 90%;
+}
+.carousel__card-details li::before {
+  content: '\2022';
+  color: var(--c-text-light);
+  font-weight: bold;
+  display: inline-block;
+  width: var(--sp-l);
+  margin-left: calc(-1 * var(--sp-l));
+}
 .carousel__card--active {
   transform: translateX(0) scale(1) rotateY(0deg);
   opacity: 1;
@@ -475,7 +511,7 @@ main{
 .contact__section{
   display: flex;
   gap: var(--fs-2);
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 .contact__button{
   font-size: var(--fs-3);
@@ -592,7 +628,10 @@ main{
   }
   .carousel__card {
     width: 50%;
-    height: 100%;
+    height: 70%;
+  }
+  .carousel {
+    height: 90vh;
   }
   .image-top-left {
     width: 50%;
@@ -648,15 +687,17 @@ main{
   .about__section{
     background-attachment: unset;
   }
-
   .carousel__card {
     width: 70%;
-    height: 100%;
+    height: 60%;
   }
   .image-top-left {
     width: 65%;
   }
-
+  .carousel__card-description-box {
+    width: 80%;
+    top: 350px;
+  }
   .image-bottom-right {
     width: 65%;
   }
@@ -681,8 +722,13 @@ main{
 }
 @media screen and (width <= 36em){
   .carousel__card {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+  }
+  .carousel__card-details{
+    font-size: calc(1.2* var(--fs-0));
+  }
+  .carousel {
+    height: 90vh;
   }
   .hero__title{
     font-size: 4rem;
@@ -710,5 +756,10 @@ main{
   }
   .contact__section{
     flex-direction: column;
+  }
+}
+@media screen and (width <= 30em){
+  .carousel__card-details{
+    font-size: var(--fs-0);
   }
 }
